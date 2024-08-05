@@ -1,22 +1,15 @@
+<!-- App.vue -->
 <template>
   <div id="app">
-    <NavBar />
-    <router-view />
+    <router-view/>
   </div>
 </template>
 
-<script>
-import NavBar from './components/NavBar.vue'
-
-export default {
-  name: 'App',
-  components: {
-    NavBar
-  }
-}
-</script>
-
 <style>
+:root {
+  --background-color: #EEEEEE;
+}
+
 html, body, #app {
   height: 100%;
   margin: 0;
@@ -24,6 +17,6 @@ html, body, #app {
 }
 
 body {
-  background:#EEEEEE; /* Mengatur latar belakang seluruh halaman */
+  background: var(--background-color); /* Mengatur latar belakang seluruh halaman */
 }
 </style>

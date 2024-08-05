@@ -86,6 +86,9 @@ body {
   margin-left: 8.3vw;
   margin-top: 4vw;
   font-family: 'Arial Rounded MT Bold', sans-serif;
+  position: fixed; /* Add this line to make the navbar fixed */
+  top: 0; /* Add this line to position the navbar at the top */
+  z-index: 10; /* Add this line to make sure the navbar stays on top of other elements */
 }
 
 .brand {
@@ -96,7 +99,7 @@ body {
 .brand img {
   height: 40px;
   margin-right: 10px;
-  margin-top: -0.7vw;
+  margin-top: -0.5vw;
 }
 
 .app-name {
@@ -114,8 +117,8 @@ body {
   position: absolute;
   width: 70px;
   height: 25px;
-  left: 82vw;
-  top: 4.8vw;
+  left: 73.5vw;
+  top: 0.7vw;
   color: white;
   background: #000000;
   border-radius: 5px;
@@ -128,7 +131,7 @@ body {
   position: absolute;
   width: 70px;
   height: 25px;
-  left: 87vw;
-  top: 4.7vw;
+  left: 78vw;
+  top: 0.7vw;
 }
 </style>

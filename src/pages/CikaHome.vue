@@ -1,4 +1,5 @@
 <template>
+  <NavBar />
   <div class="container">
     <div class="images">
       <img
@@ -7,7 +8,7 @@
         class="image image-left"
       />
       <img
-        :src="require('@/assets/home_banjir.png')"
+        :src="require('@/assets/home_kebanjiran.jpg')"
         alt="Image 2"
         class="image image-middle"
       />
@@ -52,18 +53,25 @@
         :category="card.category"
         :title="card.title"
         :amount="card.amount"
+        :budget="card.budget" 
       />
     </div>
+    
   </div>
+  <CikaFooter/>
 </template>
 
 <script>
 import CardComponent from '@/components/CardComponent.vue';
+import NavBar from '@/components/NavBar.vue';
+import CikaFooter from '@/components/CikaFooter.vue'
 
 export default {
   name: 'CikaHome',
   components: {
-    CardComponent
+    CardComponent,
+    NavBar,
+    CikaFooter
   },
   data() {
     return {
@@ -72,38 +80,44 @@ export default {
           imageSrc: require('@/assets/home_disaster.png'),
           category: 'bencana alam longsor',
           title: 'Kisah Pilu Sang Ayah Yang Kehilangan Rumah',
-          amount: 'Rp. 2,835,000'
+          amount: 'Rp. 2,835,000',
+          budget: 5000
         },
         {
           imageSrc: require('@/assets/home_disaster.png'),
           category: 'bencana alam banjir',
           title: 'Banjir Besar di Kota',
-          amount: 'Rp. 1,500,000'
+          amount: 'Rp. 1,500,000',
+          budget: 15000
         },
         {
           imageSrc: require('@/assets/home_disaster.png'),
           category: 'bencana alam gempa',
           title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000'
+          amount: 'Rp. 3,000,000',
+          budget: 7000000
         },
         {
           imageSrc: require('@/assets/home_disaster.png'),
           category: 'bencana alam gempa',
           title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000'
+          amount: 'Rp. 3,000,000',
+          budget: 7000000
         },
         {
           imageSrc: require('@/assets/home_disaster.png'),
           category: 'bencana alam gempa',
           title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000'
+          amount: 'Rp. 3,000,000',
+          budget: 7000000
         },
-         {
+        {
           imageSrc: require('@/assets/home_disaster.png'),
           category: 'bencana alam gempa',
           title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000'
-        }
+          amount: 'Rp. 3,000,000',
+          budget: 700
+        },
       ]
     };
   },
@@ -128,12 +142,13 @@ export default {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-top: 3vw;
+  margin-top: 10vw;
+  padding: 0 5vw;
 }
 
 .images {
   display: flex;
-  width: 84.7vw;
+  width: 100%;
   justify-content: center;
   margin-bottom: 2vw;
 }
@@ -160,6 +175,7 @@ export default {
 p {
   font-family: 'Raleway';
   font-size: 30px;
+  text-align: center;
 }
 
 .menu {
@@ -172,25 +188,16 @@ p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin: 0 15px;
+  margin: 0 2vw;
   text-align: center;
-  padding: 10px;
-  background: #f0f0f0;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.menu-item:hover {
-  background: #e0e0e0;
 }
 
 .btnKategori, .btnRiwayat, .btnInbox {
   border: none;
   background: transparent;
-}
-
-.menu-item svg {
-  margin-bottom: 5px;
+  cursor: pointer;
+  padding: 0;
+  margin-bottom: 0.5vw;
 }
 
 .card-container {
@@ -198,5 +205,78 @@ p {
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 2vw;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 10vw;
+    padding: 0 2vw;
+  }
+  
+  .images {
+    flex-direction: column;
+  }
+
+  .image {
+    width: 100%;
+    margin-bottom: 2vw;
+  }
+
+  .image-left, .image-middle, .image-right {
+    border-radius: 5px;
+  }
+
+  p {
+    font-size: 6vw;
+  }
+
+  .menu {
+    flex-direction: column;
+  }
+
+  .menu-item {
+    margin: 2vw 0;
+  }
+
+  .btnKategori, .btnRiwayat, .btnInbox {
+    width: 50px;
+    height: 50px;
+  }
+
+  .card-container {
+    flex-direction: column;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin-top: 7vw;
+    padding: 0 5vw;
+  }
+
+  .images {
+    flex-direction: row;
+  }
+
+  .image {
+    width: 30vw;
+  }
+
+  p {
+    font-size: 5vw;
+  }
+
+  .menu {
+    flex-direction: row;
+  }
+
+  .menu-item {
+    margin: 1vw;
+  }
+
+  .card-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 </style>

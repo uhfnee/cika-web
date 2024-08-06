@@ -53,10 +53,16 @@ export default {
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap");
 @import url('https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap');
 
+.Footer {
+  width: 100%;
+}
+
 .container {
+  width: 100%;
   background-color: #5B5B5B;
   padding: 20px;
-  padding-bottom: 50px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
 .footer-title {
@@ -71,6 +77,7 @@ export default {
   margin-left: 0vw;
   margin-top: -1.8vw;
 }
+
 .title {
   font-family: 'Arial Rounded MT Bold', sans-serif;
   font-weight: 600;
@@ -84,9 +91,11 @@ export default {
   color: white;
   margin-top: -1.9vw;
 }
+
 .footer-title img {
   width: 4.8vw;
 }
+
 .footer-col {
   font-family: Raleway;
   display: grid;
@@ -111,9 +120,11 @@ export default {
   margin-left: 11vw;
   width: 20vw;
 }
+
 iframe {
   margin-left: 20vw;
 }
+
 ul {
   list-style-type: none;
   padding: 0;
@@ -131,9 +142,10 @@ a {
 a:hover {
   text-decoration: underline;
 }
-.cr{
+
+.cr {
   color: #ffffff;
-  padding-left: 80vw;
+  text-align: right;
   margin-top: -1vw;
 }
 </style>

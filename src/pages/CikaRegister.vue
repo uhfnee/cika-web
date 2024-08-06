@@ -1,63 +1,57 @@
 <template>
   <div class="container">
-    <div class="left">
-      <img
-        :src="require('@/assets/login.png')"
-        alt="Image 1"
-        class="image"
-      />
-    </div>
+    
     <div class="right">
       <div v-if="!showRegister">
         <h1>Register</h1>
         <form @submit.prevent="handleRegister">
           <div class="form-group">
-            <label for="name">Nama</label>
+            <label for="name"></label>
             <input
               type="text"
               id="name"
               v-model="name"
-              placeholder="Enter your name"
+              placeholder="Nama..."
               required
             />
           </div>
           <div class="form-group">
-            <label for="username">Username</label>
+            <label for="username"></label>
             <input
               type="text"
               id="username"
               v-model="username"
-              placeholder="Enter your username"
+              placeholder="username..."
               required
             />
           </div>
           <div class="form-group">
-            <label for="no_telepon">No Telepon</label>
+            <label for="no_telepon"></label>
             <input
               type="text"
               id="no_telepon"
               v-model="no_telepon"
-              placeholder="Enter your phone number"
+              placeholder="no telepon..."
               required
             />
           </div>
           <div class="form-group">
-            <label for="email">Email</label>
+            <label for="email"></label>
             <input
               type="email"
               id="email"
               v-model="registerEmail"
-              placeholder="Enter your email"
+              placeholder="email..."
               required
             />
           </div>
           <div class="form-group">
-            <label for="password">Password</label>
+            <label for="password"></label>
             <input
               type="password"
               id="password"
               v-model="registerPassword"
-              placeholder="Enter your password"
+              placeholder="password..."
               required
             />
           </div>
@@ -95,6 +89,13 @@
         </p>
       </div>
     </div>
+    <div class="left">
+      <img
+        :src="require('@/assets/login.png')"
+        alt="Image 1"
+        class="image"
+      />
+    </div>
   </div>
 </template>
 
@@ -131,17 +132,18 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap');
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
-  background-color: #f7f7f7;
+  background-color: #eeee;
 }
 
 .left {
-  background-color: #ccc;
-  border-radius: 0% 20% 20% 0%;
+  background-color: #ffffff;
+  border-radius: 20% 0% 0% 20%;
   width: 50%;
   height: 100%;
   display: flex;
@@ -162,52 +164,63 @@ export default {
 .right {
   width: 40%;
   padding: 55px;
-  border-radius: 10px;
-  background-color: #ffffff;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 h1, h2 {
   text-align: center;
   margin-bottom: 20px;
+  margin-right: 50vw;
+  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-weight: bold;
 }
 
 .form-group {
   margin-bottom: 15px;
+  padding: 3px;
 }
 
 label {
   display: block;
   margin-bottom: 5px;
+  font-family: Arial, sans-serif;
   font-weight: bold;
 }
 
 input {
-  width: 100%;
+  width: 90%;
   padding: 10px;
-  border: 1px solid #ccc;
+  border: 1px solid #B9B9B9;
+  background-color: #B9B9B9; 
   border-radius: 5px;
   box-sizing: border-box;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 button {
-  width: 100%;
+  width: 20%;
   padding: 10px;
+  margin-left: 15.5vw;
   background-color: #000000;
   color: white;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
   cursor: pointer;
-  margin-top: 10px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 p {
   text-align: center;
   margin-top: 20px;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 
 a {
   color: #4f95ff;
   text-decoration: none;
+  font-family: Arial, sans-serif;
+  font-weight: bold;
 }
 </style>

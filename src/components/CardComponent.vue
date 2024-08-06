@@ -32,7 +32,6 @@ export default {
   }
 }
 </script>
-
 <style scoped>
 .card {
   border: 1px solid #e0e0e0;
@@ -41,28 +40,31 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-inline: 30px;
   margin-block: 30px;
-  width: calc(30% - 30px);
+  width: 45%;
+  background-color: white;
 }
 .card-img {
-  width: 20vw;
+  width: 10vw;
   margin-left: 1vw;
   margin-top: 1vw;
 }
 .card-content {
   padding: 16px;
-}
+  padding-left: 30%;
+  margin-top: -25%;
+  padding-bottom: 60px;
+  }
+
+.title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 16px;
+  }
 .category {
   color: #757575;
   font-size: 14px;
   margin-bottom: 8px;
 }
-
-.title {
-  font-size: 18px;
-  font-weight: 600;
-  margin-bottom: 16px;
-}
-
 .amount {
   font-size: 16px;
   font-weight: 500;

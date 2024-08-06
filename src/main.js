@@ -10,6 +10,10 @@ import CikaKategori from './pages/CikaKategori.vue';
 import CikaInbox from './pages/CikaInbox.vue';
 import CikaProfile from './pages/CikaProfile.vue';
 import CikaRiwayat from './pages/CikaRiwayat.vue';
+import KecelakaanBencana from './pages/KecelakaanBencana.vue';
+import KesehatanPendidikan from './pages/KesehatanPendidikan.vue';
+import PantiAsuhan from './pages/PantiAsuhan.vue';
+import FullKategori from './pages/FullKategori.vue';
 
 // Definisikan rute
 const routes = [
@@ -19,7 +23,12 @@ const routes = [
   { path: '/CikaKategori', component: CikaKategori },
   { path: '/CikaInbox', component: CikaInbox },
   { path: '/CikaProfile', component: CikaProfile },
-  { path: '/CikaRiwayat', component: CikaRiwayat }
+  { path: '/CikaRiwayat', component: CikaRiwayat },
+  { path: '/KecelakaanBencana', component: KecelakaanBencana },
+  { path: '/KesehatanPendidikan', component: KesehatanPendidikan },
+  { path: '/PantiAsuhan', component: PantiAsuhan },
+  { path: '/FullKategori', component: FullKategori },
+
 ];
 
 // Buat router

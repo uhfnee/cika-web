@@ -12,22 +12,20 @@
       <h1>Login</h1>
       <form @submit.prevent="handleSubmit">
         <div class="form-group">
-          <label for="email">Email</label>
           <input
             type="email"
             id="email"
             v-model="email"
-            placeholder="Enter your email"
+            placeholder="email..."
             required
           />
         </div>
         <div class="form-group">
-          <label for="password">Password</label>
           <input
             type="password"
             id="password"
             v-model="password"
-            placeholder="Enter your password"
+            placeholder="password..."
             required
           />
         </div>
@@ -60,12 +58,14 @@ export default {
 </script>
 
 <style scoped>
+@import url('https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap');
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   background-color: var(--background-color);
+  font-family: 'Arial Rounded MT Bold', sans-serif;
 }
 .left {
   background-color: #ffffff;

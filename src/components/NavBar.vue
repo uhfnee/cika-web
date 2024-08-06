@@ -6,8 +6,12 @@
         <span class="app-name">{{ appName }}</span>
       </div>
       <ul class="nav-list">
+        <router-link to="/CikaHome" style="text-decoration: underline; color: inherit;"><li>Beranda</li></router-link>
+        <router-link to="/CikaKategori" style="text-decoration: underline; color: inherit;"><li>Kategori</li></router-link>
+        <router-link to="/CikaInbox" style="text-decoration: underline; color: inherit;"><li>Inbox</li></router-link>
+        <router-link to="/CikaRiwayat" style="text-decoration: underline; color: inherit;"><li>Riwayat</li></router-link>
         <li>
-          <router-link to="/CikaKategori">
+          <router-link to="/FullKategori">
             <button class="btnDonate">Donate</button>
           </router-link>
         </li>
@@ -58,37 +62,47 @@
 
 <script>
 export default {
-  name: 'NavBar',
+  name: "NavBar",
   data() {
     return {
-      logoSrc: require('@/assets/logo_cika.png'),
-      logoAlt: 'logo_ch',
-      appName: 'CiKa',
-      isLoggedIn: false 
+      logoSrc: require("@/assets/logo_cika.png"),
+      logoAlt: "logo_ch",
+      appName: "CiKa",
+      isLoggedIn: false,
     };
-  }
+  },
 };
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap");
 
 body {
-  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-family: "Arial Rounded MT Bold", sans-serif;
 }
 
 .navbar {
   background-color: #ffffff;
   padding: 1rem;
   border-radius: 5px;
-  width: 80vw;
-  height: 1vw;
-  margin-left: 8.3vw;
-  margin-top: 4vw;
-  font-family: 'Arial Rounded MT Bold', sans-serif;
-  position: fixed; /* Add this line to make the navbar fixed */
-  top: 0; /* Add this line to position the navbar at the top */
-  z-index: 10; /* Add this line to make sure the navbar stays on top of other elements */
+  width: 100vw;
+  height: 3.5vw;
+  font-family: "Arial Rounded MT Bold", sans-serif;
+  position: fixed;
+  top: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .brand {
@@ -99,26 +113,36 @@ body {
 .brand img {
   height: 40px;
   margin-right: 10px;
-  margin-top: -0.5vw;
 }
 
 .app-name {
   font-size: 1.5rem;
   font-weight: bold;
-  margin-top: -0.9vw;
 }
 
 .nav-list {
   display: flex;
   list-style: none;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  margin-right: 5vw;
 }
 
+.nav-list li {
+  margin: 0 1rem;
+  font-family: "Raleway", sans-serif;
+  font-size: 1rem;
+}
+.nav-list > li > router-link { /* Higher specificity */
+  text-decoration: none;
+  color: inherit;
+}
+
+
 .btnDonate {
-  position: absolute;
   width: 70px;
   height: 25px;
-  left: 73.5vw;
-  top: 0.7vw;
   color: white;
   background: #000000;
   border-radius: 5px;
@@ -128,10 +152,5 @@ body {
 .btnProfile {
   background: transparent;
   border: none;
-  position: absolute;
-  width: 70px;
-  height: 25px;
-  left: 78vw;
-  top: 0.7vw;
 }
 </style>

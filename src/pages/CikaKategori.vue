@@ -61,7 +61,7 @@
         yang lebih baik. Bergabunglah dalam upaya ini dan jadilah bagian dari
         solusi. Bersama, kita dapat membuat perbedaan yang nyata!
       </p>
-      <button @click="goToCategory('/kategori/donasi')">Donasi Sekarang</button>
+      <button @click="goToCategory('/FullKategori')">Donasi Sekarang</button>
     </div>
 
     <!-- Testimonials -->
@@ -98,19 +98,19 @@ export default {
     return {
       categories: [
         {
-          title: "Kebakaran & Bencana",
+          title: "Kecelakaan & Bencana",
           image: require("@/assets/home_kebanjiran.jpg"),
           link: "/KecelakaanBencana",
         },
         {
           title: "Kesehatan & Pendidikan",
           image: require("@/assets/home_kebanjiran.jpg"),
-          link: "/kategori/kesehatan-pendidikan",
+          link: "/KesehatanPendidikan",
         },
         {
           title: "Panti Asuhan",
           image: require("@/assets/home_kebanjiran.jpg"),
-          link: "/kategori/panti-asuhan",
+          link: "/PantiAsuhan",
         },
       ],
       testimonials: [

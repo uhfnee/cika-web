@@ -1,18 +1,21 @@
+<!-- CardComponent -->
 <template>
   <div class="card">
-    <img :src="imageSrc" alt="Disaster Image" class="card-img">
+    <router-link to="/CikaDetails" style="text-decoration: none; color: inherit;">
+    <img :src="imageSrc" alt="Disaster Image" class="card-img" />
     <div class="card-content">
       <p class="category">{{ category }}</p>
       <h3 class="title">{{ title }}</h3>
-      <p class="amount">Terkumpul <span>{{ amount }}</span></p>
+      <p class="amount">
+        Terkumpul <span>{{ amount }}</span>
+      </p>
       <div class="progress-bar">
-        <div
-          class="progress"
-          :style="{ width: progressWidth }"
-        ></div>
+        <div class="progress" :style="{ width: progressWidth }"></div>
       </div>
     </div>
+  </router-link>
   </div>
+
 </template>
 
 <script>
@@ -22,15 +25,17 @@ export default {
     category: String,
     title: String,
     amount: String,
-    budget: Number // Add budget as a prop
+    budget: Number,
   },
   computed: {
     progressWidth() {
-      const amount = parseFloat(this.amount.replace('Rp. ', '').replace(',', ''));
+      const amount = parseFloat(
+        this.amount.replace("Rp. ", "").replace(",", "")
+      );
       return `${(amount / this.budget) * 100}%`;
-    }
-  }
-}
+    },
+  },
+};
 </script>
 <style scoped>
 .card {
@@ -53,13 +58,13 @@ export default {
   padding-left: 30%;
   margin-top: -25%;
   padding-bottom: 60px;
-  }
+}
 
 .title {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 16px;
-  }
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
 .category {
   color: #757575;
   font-size: 14px;
@@ -68,7 +73,7 @@ export default {
 .amount {
   font-size: 16px;
   font-weight: 500;
-  color: #4CAF50;
+  color: #4caf50;
 }
 
 .amount span {
@@ -85,7 +90,7 @@ export default {
 }
 
 .progress {
-  background: #4CAF50;
+  background: #4caf50;
   height: 100%;
   border-radius: 5px;
   transition: width 0.3s ease;

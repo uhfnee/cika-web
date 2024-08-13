@@ -12,17 +12,17 @@
         <div class="footer-col-1">
           <p>Quick Links</p>
           <ul>
-            <li><router-link to="/CikaKategori">Donasi Kecelakaan dan Bencana</router-link></li>
-            <li><router-link to="/CikaKategori">Donasi Kesehatan dan Pendidikan</router-link></li>
-            <li><router-link to="/CikaKategori">Donasi Panti Asuhan</router-link></li>
+            <li class="list_1"><router-link to="/KecelakaanBencana">Donasi Kecelakaan dan Bencana</router-link></li>
+            <li class="list_2"><router-link to="/KesehatanPendidikan">Donasi Kesehatan dan Pendidikan</router-link></li>
+            <li class="list_3"><router-link to="/PantiAsuhan">Donasi Panti Asuhan</router-link></li>
           </ul>
         </div>
         <div class="footer-col-2">
           <p>Contact Us</p>
           <ul>
-            <li><a :href="contactLinks.whatsapp" target="_blank">WhatsApp</a></li>
-            <li><a :href="contactLinks.instagram" target="_blank">Instagram</a></li>
-            <li><a :href="contactLinks.email" target="_blank">Email</a></li>
+            <li class="list_1"><a :href="contactLinks.whatsapp" target="_blank">WhatsApp</a></li>
+            <li class="list_2"><a :href="contactLinks.instagram" target="_blank">Instagram</a></li>
+            <li class="list_3"><a :href="contactLinks.email" target="_blank">Email</a></li>
           </ul>
         </div>
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1398.077841392552!2d107.70031182343777!3d-6.960692065855077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e68e9ec7f7ac5bd%3A0x64fa19f2732b39e4!2sPT.%20Cahaya%20Acitya%20Indonesia%20(Codelite)!5e0!3m2!1sid!2sid!4v1721374703464!5m2!1sid!2sid" width="400vw" height="132vw" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -40,9 +40,9 @@ export default {
       logoSrc: require('@/assets/logo_cika.png'),
       logoAlt: 'logo_cf',
       contactLinks: {
-        whatsapp: 'https://wa.me/1234567890', // Ganti dengan nomor WhatsApp Anda
-        instagram: 'https://instagram.com/yourprofile', // Ganti dengan URL Instagram Anda
-        email: 'mailto:contact@yourdomain.com' // Ganti dengan email Anda
+        whatsapp: 'https://wa.me/1234567890', 
+        instagram: 'https://instagram.com/yourprofile', 
+        email: 'mailto:contact@yourdomain.com' 
       }
     };
   }
@@ -74,8 +74,8 @@ export default {
 .title-group {
   display: flex;
   flex-direction: column;
-  margin-left: 0vw;
-  margin-top: -1.8vw;
+  margin-left: 1vw;
+  margin-top: -1.6vw;
 }
 
 .title {
@@ -93,7 +93,8 @@ export default {
 }
 
 .footer-title img {
-  width: 4.8vw;
+  width: 4vw;
+  border-radius: 5px;
 }
 
 .footer-col {
@@ -119,6 +120,15 @@ export default {
   margin-top: -3vw;
   margin-left: 11vw;
   width: 20vw;
+}
+.list_1 {
+  margin-top: 1vw;
+}
+.list_2 {
+  margin-top: 1.7vw;
+}
+.list_3 {
+  margin-top: 2vw;
 }
 
 iframe {

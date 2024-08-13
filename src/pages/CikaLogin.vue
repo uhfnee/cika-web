@@ -1,12 +1,8 @@
-<!-- CikaLogin.vue -->
 <template>
   <div class="container">
     <div class="left">
-      <img
-        :src="require('@/assets/login.png')"
-        alt="Image 1"
-        class="image"
-      />
+      <button class="back-button" @click="goBack">←</button>
+      <img :src="require('@/assets/login.png')" alt="Image 1" class="image" />
     </div>
     <div class="right">
       <h1>Login</h1>
@@ -28,10 +24,14 @@
             placeholder="password..."
             required
           />
+          <router-link
+            to="/CikaRegister"
+            class="forgot-password"
+          >lupa password</router-link>
         </div>
         <button type="submit">Masuk</button>
       </form>
-      <p>
+      <p class="p2">
         Belum punya akun?
         <router-link to="/CikaRegister">Daftar dulu</router-link>
       </p>
@@ -41,7 +41,7 @@
 
 <script>
 export default {
-  name: 'CikaLogin',
+  name: "CikaLogin",
   data() {
     return {
       email: "",
@@ -53,19 +53,22 @@ export default {
       console.log("Email:", this.email);
       console.log("Password:", this.password);
     },
+    goBack() {
+      this.$router.go(-1);
+    },
   },
 };
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap");
 .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100vh;
   background-color: var(--background-color);
-  font-family: 'Arial Rounded MT Bold', sans-serif;
+  font-family: "Arial Rounded MT Bold", sans-serif;
 }
 .left {
   background-color: #ffffff;
@@ -74,6 +77,17 @@ export default {
   width: 50%;
   height: 90vh;
   position: relative;
+}
+
+.back-button {
+  color: #000000;
+  position: relative;
+  bottom: 7%;
+  right: 35%;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
 }
 
 .image {
@@ -99,6 +113,8 @@ h1 {
 
 .form-group {
   margin-bottom: 15px;
+  padding: 2.5px;
+  position: relative;
 }
 
 label {
@@ -120,15 +136,24 @@ button {
   width: 20%;
   padding: 10px;
   margin-left: 15.5vw;
+  margin-top: 5px;
   background-color: #000000;
   color: white;
   border: none;
   border-radius: 10px;
   cursor: pointer;
 }
-p {
-  margin-left: 13.5vw;
+
+.forgot-password {
+  bottom: -20px;
+  font-size: 13px;
+  color: brown;
 }
+
+.p2 {
+  margin-left: 13vw;
+}
+
 a {
   color: #4f95ff;
   text-decoration: none;

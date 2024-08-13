@@ -6,10 +6,11 @@
         <span class="app-name">{{ appName }}</span>
       </div>
       <ul class="nav-list">
-        <router-link to="/CikaHome" style="text-decoration: underline; color: inherit;"><li>Beranda</li></router-link>
-        <router-link to="/CikaKategori" style="text-decoration: underline; color: inherit;"><li>Kategori</li></router-link>
-        <router-link to="/CikaInbox" style="text-decoration: underline; color: inherit;"><li>Inbox</li></router-link>
-        <router-link to="/CikaRiwayat" style="text-decoration: underline; color: inherit;"><li>Riwayat</li></router-link>
+        <router-link to="/CikaHome" style="text-decoration: none; color: inherit;"><li>Beranda</li></router-link>
+        <router-link to="/CikaKategori" style="text-decoration: none; color: inherit;"><li>Kategori</li></router-link>
+        <router-link to="/CikaInbox" style="text-decoration: none; color: inherit;"><li>Inbox</li></router-link>
+        <router-link to="/CikaRiwayat" style="text-decoration: none; color: inherit;"><li>Riwayat</li></router-link>
+        <router-link to="/GalangDana" style="text-decoration: none; color: inherit;"><li>Galang Dana</li></router-link>
         <li>
           <router-link to="/FullKategori">
             <button class="btnDonate">Donate</button>
@@ -113,6 +114,7 @@ nav {
 .brand img {
   height: 40px;
   margin-right: 10px;
+  border-radius: 5px;
 }
 
 .app-name {

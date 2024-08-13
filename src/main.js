@@ -14,6 +14,8 @@ import KecelakaanBencana from './pages/KecelakaanBencana.vue';
 import KesehatanPendidikan from './pages/KesehatanPendidikan.vue';
 import PantiAsuhan from './pages/PantiAsuhan.vue';
 import FullKategori from './pages/FullKategori.vue';
+import CikaDetails from './pages/CikaDetails.vue';
+import GalangDana from './pages/GalangDana.vue'
 
 // Definisikan rute
 const routes = [
@@ -28,6 +30,8 @@ const routes = [
   { path: '/KesehatanPendidikan', component: KesehatanPendidikan },
   { path: '/PantiAsuhan', component: PantiAsuhan },
   { path: '/FullKategori', component: FullKategori },
+  { path: '/CikaDetails', component: CikaDetails },
+  { path: '/GalangDana', component: GalangDana },
 
 ];
 

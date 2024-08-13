@@ -25,30 +25,67 @@
     <div class="visi-misi">
       <div class="visi">
         <p class="title-visi">VISI</p>
-        <p class="sub-visi">Menghubungkan hati para dermawan untuk menciptakan dunia yang peduli dan penuh kasih</p>
+        <p class="sub-visi">
+          Menghubungkan hati para dermawan untuk menciptakan dunia yang peduli
+          dan penuh kasih
+        </p>
       </div>
       <div class="misi">
         <p class="title-misi">MISI</p>
         <div class="misi-table">
           <div class="misi-item">
-            <p><strong>Memfasilitasi Aksi Kebaikan:</strong> Menyediakan platform yang mudah digunakan untuk menyalurkan donasi kepada mereka yang membutuhkan, memastikan proses yang transparan dan terpercaya.</p>
+            <p>
+              <strong>Memfasilitasi Aksi Kebaikan:</strong> Menyediakan platform
+              yang mudah digunakan untuk menyalurkan donasi kepada mereka yang
+              membutuhkan, memastikan proses yang transparan dan terpercaya.
+            </p>
           </div>
           <div class="misi-item">
-            <p><strong>Membangun Komunitas Peduli:</strong> Menginspirasi dan mengedukasi masyarakat tentang pentingnya berbagi dan beramal, serta membangun komunitas yang peduli dan saling mendukung.</p>
+            <p>
+              <strong>Membangun Komunitas Peduli:</strong> Menginspirasi dan
+              mengedukasi masyarakat tentang pentingnya berbagi dan beramal,
+              serta membangun komunitas yang peduli dan saling mendukung.
+            </p>
           </div>
           <div class="misi-item">
-            <p><strong>Mendukung Berbagai Program Sosial:</strong> Bermitra dengan organisasi dan inisiatif sosial untuk mendukung program-program yang berfokus pada pendidikan, kesehatan, pemberdayaan ekonomi, dan lingkungan.</p>
+            <p>
+              <strong>Mendukung Berbagai Program Sosial:</strong> Bermitra
+              dengan organisasi dan inisiatif sosial untuk mendukung
+              program-program yang berfokus pada pendidikan, kesehatan,
+              pemberdayaan ekonomi, dan lingkungan.
+            </p>
           </div>
           <div class="misi-item-long">
-            <p><strong>Transparansi dan Akuntabilitas:</strong> Menjamin bahwa setiap donasi disalurkan dengan tepat dan memberikan laporan yang jelas dan terperinci kepada para donatur tentang penggunaan dana yang terkumpul.</p>
+            <p>
+              <strong>Transparansi dan Akuntabilitas:</strong> Menjamin bahwa
+              setiap donasi disalurkan dengan tepat dan memberikan laporan yang
+              jelas dan terperinci kepada para donatur tentang penggunaan dana
+              yang terkumpul.
+            </p>
           </div>
           <div class="misi-item-long">
-            <p><strong>Inovasi Berkelanjutan:</strong> Terus mengembangkan teknologi dan metode baru untuk memudahkan proses donasi, serta meningkatkan efektivitas dan efisiensi dalam penyaluran bantuan.</p>
+            <p>
+              <strong>Inovasi Berkelanjutan:</strong> Terus mengembangkan
+              teknologi dan metode baru untuk memudahkan proses donasi, serta
+              meningkatkan efektivitas dan efisiensi dalam penyaluran bantuan.
+            </p>
           </div>
         </div>
       </div>
+     
     </div>
+    
   </div>
+  <div class="GalangDana">
+    <p class="GDtext">
+      Satu aksi kecil Anda bisa membawa perubahan besar. Laporkan kejadian yang
+      Anda saksikan dan buat kampanye galang dana untuk membantu mereka yang
+      membutuhkan. Bergabunglah dalam usaha ini dan berikan kontribusi nyata
+      untuk membuat perbedaan!
+    </p>
+    <button @click="goToGalangDana('/GalangDana')"> Galang dana</button>
+  </div>
+  <p class="slogan">Donasi Sekarang</p>
   <div class="card-container">
     <CardComponent
       v-for="(card, index) in cards"
@@ -57,72 +94,78 @@
       :category="card.category"
       :title="card.title"
       :amount="card.amount"
-      :budget="card.budget" 
+      :budget="card.budget"
     />
   </div>
-  <CikaFooter/>
+  
+  <CikaFooter />
 </template>
 
 <script>
-import CardComponent from '@/components/CardComponent.vue';
-import NavBar from '@/components/NavBar.vue';
-import CikaFooter from '@/components/CikaFooter.vue'
+import CardComponent from "@/components/CardComponent.vue";
+import NavBar from "@/components/NavBar.vue";
+import CikaFooter from "@/components/CikaFooter.vue";
 
 export default {
-  name: 'CikaHome',
+  name: "CikaHome",
   components: {
     CardComponent,
     NavBar,
-    CikaFooter
+    CikaFooter,
   },
   data() {
     return {
       cards: [
         {
-          imageSrc: require('@/assets/home_disaster.png'),
-          category: 'bencana alam longsor',
-          title: 'Kisah Pilu Sang Ayah Yang Kehilangan Rumah',
-          amount: 'Rp. 2,835,000',
-          budget: 50000
+          imageSrc: require("@/assets/home_disaster.png"),
+          category: "bencana alam longsor",
+          title: "Kisah Pilu Sang Ayah Yang Kehilangan Rumah",
+          amount: "Rp. 2,835,000",
+          budget: 50000,
         },
         {
-          imageSrc: require('@/assets/home_disaster.png'),
-          category: 'bencana alam banjir',
-          title: 'Banjir Besar di Kota',
-          amount: 'Rp. 1,500,000',
-          budget: 15000
+          imageSrc: require("@/assets/home_disaster.png"),
+          category: "bencana alam banjir",
+          title: "Banjir Besar di Kota",
+          amount: "Rp. 1,500,000",
+          budget: 15000,
         },
         {
-          imageSrc: require('@/assets/home_disaster.png'),
-          category: 'bencana alam gempa',
-          title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000',
-          budget: 7000000
+          imageSrc: require("@/assets/home_disaster.png"),
+          category: "bencana alam gempa",
+          title: "Gempa Bumi Menghancurkan",
+          amount: "Rp. 3,000,000",
+          budget: 7000000,
         },
         {
-          imageSrc: require('@/assets/home_disaster.png'),
-          category: 'bencana alam gempa',
-          title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000',
-          budget: 7000000
+          imageSrc: require("@/assets/home_disaster.png"),
+          category: "bencana alam gempa",
+          title: "Gempa Bumi Menghancurkan",
+          amount: "Rp. 3,000,000",
+          budget: 7000000,
         },
         {
-          imageSrc: require('@/assets/home_disaster.png'),
-          category: 'bencana alam gempa',
-          title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 3,000,000',
-          budget: 7000000
+          imageSrc: require("@/assets/home_disaster.png"),
+          category: "bencana alam gempa",
+          title: "Gempa Bumi Menghancurkan",
+          amount: "Rp. 3,000,000",
+          budget: 7000000,
         },
         {
-          imageSrc: require('@/assets/home_disaster.png'),
-          category: 'bencana alam gempa',
-          title: 'Gempa Bumi Menghancurkan',
-          amount: 'Rp. 300,000',
-          budget: 700900
+          imageSrc: require("@/assets/home_disaster.png"),
+          category: "bencana alam gempa",
+          title: "Gempa Bumi Menghancurkan",
+          amount: "Rp. 300,000",
+          budget: 700900,
         },
-      ]
+      ],
     };
-  }
+  },
+  methods: {
+    goToGalangDana(link) {
+      this.$router.push(link);
+    },
+  },
 };
 </script>
 
@@ -162,13 +205,13 @@ export default {
   border-top-right-radius: 5px;
   border-bottom-right-radius: 5px;
 }
-.slogan{
-  font-family: 'Raleway';
+.slogan {
+  font-family: "Raleway";
   font-size: 30px;
   text-align: center;
 }
 p {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 15px;
   text-align: center;
 }
@@ -183,12 +226,14 @@ p {
   margin-top: 2vw;
 }
 
-.visi, .misi {
+.visi,
+.misi {
   margin-bottom: 2vw;
 }
 
-.title-visi, .title-misi {
-  font-family: 'Raleway';
+.title-visi,
+.title-misi {
+  font-family: "Raleway";
   font-size: 20px;
   text-align: center;
   font-weight: 700;
@@ -196,7 +241,7 @@ p {
 }
 
 .sub-visi {
-  font-family: 'Raleway';
+  font-family: "Raleway";
   font-size: 18px;
   text-align: center;
   margin-bottom: 1vw;
@@ -230,15 +275,47 @@ p {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  margin-top: -1vw;
+  margin-bottom: 5vw;
+}
+.GalangDana {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url("@/assets/home_kebanjiran.jpg");
+  background-size: cover;
+  color: rgb(255, 255, 255);
   margin-top: 2vw;
+  margin-bottom: 5vw;
+  height: 1000px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
+.GDtext {
+  font-family: 'Raleway', sans-serif;
+  width: 100%;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 25px;
+}
+
+.GalangDana button {
+  width: 20%;
+  padding: 10px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 3vw;
+}
 @media (max-width: 768px) {
   .container {
     margin-top: 10vw;
     padding: 0 2vw;
   }
-  
+
   .images {
     flex-direction: column;
   }
@@ -248,7 +325,9 @@ p {
     margin-bottom: 2vw;
   }
 
-  .image-left, .image-middle, .image-right {
+  .image-left,
+  .image-middle,
+  .image-right {
     border-radius: 5px;
   }
 

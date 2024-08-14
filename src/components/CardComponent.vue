@@ -38,6 +38,7 @@ export default {
 };
 </script>
 <style scoped>
+@import url("https://fonts.googleapis.com/css2?family=Arial+Rounded+MT+Bold:wght@400&display=swap");
 .card {
   border: 1px solid #e0e0e0;
   border-radius: 10px;
@@ -45,7 +46,7 @@ export default {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   margin-inline: 30px;
   margin-block: 30px;
-  width: 45%;
+  width: 38.7vw;
   background-color: white;
 }
 .card-img {
@@ -56,8 +57,9 @@ export default {
 .card-content {
   padding: 16px;
   padding-left: 30%;
-  margin-top: -25%;
-  padding-bottom: 60px;
+  margin-top: -13.7vw;
+  padding-bottom: 2vw;
+  font-family: 'Arial TM Bold', sans-serif;
 }
 
 .title {

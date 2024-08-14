@@ -303,12 +303,17 @@ p {
 .GalangDana button {
   width: 20%;
   padding: 10px;
-  background-color: #000000;
-  color: white;
+  background-color: white;
+  color: rgb(0, 0, 0);
   border: none;
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 3vw;
+  font-weight: bold;
+  transform: background-color;
+}
+.GalangDana button:hover{
+  background-color: #a19f9f;
 }
 @media (max-width: 768px) {
   .container {

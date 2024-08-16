@@ -1,8 +1,6 @@
-<!-- CikaKategori.vue -->
 <template>
   <NavBar />
   <div class="container">
-    <!-- Categories -->
     <div class="card-container">
       <div
         class="card"
@@ -15,17 +13,11 @@
       </div>
     </div>
 
-    <!-- Info Section -->
     <div class="info-section">
-      <!-- Gambar dan teks pertama -->
       <div class="info-item">
         <div class="info-text">
           <p>
-            Indonesia adalah negara yang terletak di Cincin Api Pasifik, yang
-            membuatnya sangat rentan terhadap bencana alam seperti gempa bumi,
-            letusan gunung berapi, dan tsunami. Selain itu, bencana alam ini
-            sering kali berdampak besar pada masyarakat dan infrastruktur,
-            memerlukan perhatian dan bantuan yang signifikan.
+            {{ infoText1 }}
           </p>
         </div>
         <img
@@ -34,7 +26,6 @@
           class="info-image"
         />
       </div>
-      <!-- Gambar dan teks kedua -->
       <div class="info-item reverse">
         <img
           :src="require('@/assets/home_pantiasuhan.png')"
@@ -43,11 +34,7 @@
         />
         <div class="info-text">
           <p>
-            Kesehatan dan pendidikan juga menjadi fokus penting di Indonesia.
-            Program-program kesehatan seperti vaksinasi dan upaya pencegahan
-            penyakit berusaha untuk meningkatkan kualitas hidup warga.
-            Pendidikan merupakan hak dasar yang penting untuk mempersiapkan
-            generasi mendatang dalam menghadapi tantangan masa depan.
+            {{ infoText2 }}
           </p>
         </div>
       </div>
@@ -55,16 +42,11 @@
 
     <div class="motivasi-text">
       <p class="text-1">
-        Setiap langkah kecil kita dapat menciptakan perubahan besar. Dengan
-        memahami dan bertindak terhadap tantangan yang dihadapi masyarakat, kita
-        tidak hanya membantu mereka saat ini, tetapi juga membentuk masa depan
-        yang lebih baik. Bergabunglah dalam upaya ini dan jadilah bagian dari
-        solusi. Bersama, kita dapat membuat perbedaan yang nyata!
+        {{ motivasiText }}
       </p>
       <button @click="goToCategory('/FullKategori')">Donasi Sekarang</button>
     </div>
 
-    <!-- Testimonials -->
     <div class="testimonials">
       <h2>Cerita dari Mereka yang Terlibat</h2>
       <div
@@ -79,20 +61,22 @@
       </div>
     </div>
 
-    <!-- CTA Section -->
     <div class="cta-section">
       <h2>Bergabunglah dengan Kami dalam Misi Ini</h2>
     </div>
   </div>
+  <CikaFooter />
 </template>
 
 <script>
 import NavBar from "@/components/NavBar.vue";
+import CikaFooter from "@/components/CikaFooter.vue";
 
 export default {
   name: "CikaKategori",
   components: {
     NavBar,
+    CikaFooter,
   },
   data() {
     return {
@@ -113,6 +97,9 @@ export default {
           link: "/PantiAsuhan",
         },
       ],
+      infoText1: "Indonesia adalah negara yang terletak di Cincin Api Pasifik, yang membuatnya sangat rentan terhadap bencana alam seperti gempa bumi, letusan gunung berapi, dan tsunami. Selain itu, bencana alam ini sering kali berdampak besar pada masyarakat dan infrastruktur, memerlukan perhatian dan bantuan yang signifikan.",
+      infoText2: "Kesehatan dan pendidikan juga menjadi fokus penting di Indonesia. Program-program kesehatan seperti vaksinasi dan upaya pencegahan penyakit berusaha untuk meningkatkan kualitas hidup warga. Pendidikan merupakan hak dasar yang penting untuk mempersiapkan generasi mendatang dalam menghadapi tantangan masa depan.",
+      motivasiText: "Setiap langkah kecil kita dapat menciptakan perubahan besar. Dengan memahami dan bertindak terhadap tantangan yang dihadapi masyarakat, kita tidak hanya membantu mereka saat ini, tetapi juga membentuk masa depan yang lebih baik. Bergabunglah dalam upaya ini dan jadilah bagian dari solusi. Bersama, kita dapat membuat perbedaan yang nyata!",
       testimonials: [
         {
           text: "Program ini telah membantu kami dengan sangat baik, menyediakan dukungan yang kami butuhkan saat krisis.",
@@ -232,15 +219,6 @@ h2 {
   margin-bottom: 5vw;
 }
 
-.motivasi-text button {
-  background-color: #050505;
-  color: #fff;
-  border: none;
-  padding: 1vw;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 12px;
-}
 .motivasi-text {
   background: url("@/assets/kategori_bg1.jpeg") no-repeat center center;
   background-size: cover;
@@ -264,7 +242,52 @@ h2 {
   font-size: 18px;
   font-family: "Inria Serif";
 }
+
+.motivasi-text button {
+  background-color: #050505;
+  color: #fff;
+  border: none;
+  padding: 1vw;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 12px;
+}
+
 .motivasi-text button:hover {
   background-color: #3a4046;
+}
+
+@media (max-width: 768px) {
+  .container {
+    margin-top: 10vw;
+    padding: 0 2vw;
+  }
+
+  .info-item {
+    flex-direction: column;
+  }
+
+  .info-image {
+    width: 100%;
+  }
+
+  .info-text {
+    width: 100%;
+  }
+
+  .card {
+    width: 80vw;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container {
+    margin-top: 7vw;
+    padding: 0 5vw;
+  }
+
+  .card {
+    width: 30vw;
+  }
 }
 </style>

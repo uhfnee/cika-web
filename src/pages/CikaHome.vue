@@ -316,6 +316,39 @@ p {
   background-color: #a19f9f;
 }
 @media (max-width: 768px) {
+  .visi-misi {
+    width: 90vw;
+    margin-top: 5vw;
+  }
+
+  .misi-item,
+  .misi-item-long {
+    width: 100%;
+  }
+
+  .title-visi,
+  .title-misi {
+    font-size: 6vw;
+  }
+
+  .sub-visi {
+    font-size: 5vw;
+  }
+
+  .misi-table {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .misi-item {
+    margin: 2vw 0;
+    width: 100%;
+  }
+
+  .misi-item-long {
+    margin: 2vw 0;
+    width: 100%;
+  }
   .container {
     margin-top: 10vw;
     padding: 0 2vw;
@@ -350,6 +383,7 @@ p {
 
   .card-container {
     flex-direction: column;
+    align-items: center;
   }
 }
 
@@ -382,6 +416,27 @@ p {
   .card-container {
     flex-direction: row;
     flex-wrap: wrap;
+  }
+  .visi-misi {
+    width: 85vw;
+    margin-top: 4vw;
+  }
+
+  .misi-item {
+    width: 48%;
+  }
+
+  .misi-item-long {
+    width: 98%;
+  }
+
+  .title-visi,
+  .title-misi {
+    font-size: 5vw;
+  }
+
+  .sub-visi {
+    font-size: 4vw;
   }
 }
 </style>

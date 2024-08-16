@@ -10,7 +10,7 @@
     <div class="info-section">
       <div class="info-item">
         <img
-          :src="require('@/assets/home_pantiasuhan.png')"
+          :src="require('@/assets/layanan_kesehatan.jpg')"
           alt="Image 1"
           class="info-image"
           id="info-image"
@@ -106,10 +106,10 @@ export default {
   mounted() {
     const img = document.getElementById("info-image");
     img.addEventListener("mouseover", function () {
-      this.src = require("@/assets/home_kebakaran.png");
+      this.src = require("@/assets/anak_pantiasuhan2.jpg");
     });
     img.addEventListener("mouseout", function () {
-      this.src = require("@/assets/home_pantiasuhan.png");
+      this.src = require("@/assets/anak-sekolah.jpg");
     });
   },
 };

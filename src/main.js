@@ -15,7 +15,9 @@ import KesehatanPendidikan from './pages/KesehatanPendidikan.vue';
 import PantiAsuhan from './pages/PantiAsuhan.vue';
 import FullKategori from './pages/FullKategori.vue';
 import CikaDetails from './pages/CikaDetails.vue';
-import GalangDana from './pages/GalangDana.vue'
+import GalangDana from './pages/GalangDana.vue';
+import ChangePassword from './pages/ChangePassword.vue';
+import ForgotPass from './pages/ForgotPass.vue'
 
 // Definisikan rute
 const routes = [
@@ -32,6 +34,8 @@ const routes = [
   { path: '/FullKategori', component: FullKategori },
   { path: '/CikaDetails', component: CikaDetails },
   { path: '/GalangDana', component: GalangDana },
+  { path: '/ChangePassword', component: ChangePassword},
+  { path: '/ForgotPass', component: ForgotPass}
 
 ];
 

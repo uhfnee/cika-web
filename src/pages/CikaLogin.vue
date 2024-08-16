@@ -25,7 +25,7 @@
             required
           />
           <router-link
-            to="/CikaRegister"
+            to="/ForgotPass"
             class="forgot-password"
           >lupa password</router-link>
         </div>
